@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1693377122 source:c:\users\mohamed\desktop\linked_lest.c\main.c
+	<stdio.h>
+	<stdlib.h>
+	"linked_lest.h"
+
+1693375868 source:c:\users\mohamed\desktop\linked_lest.c\linked_lest.c
+	<stdio.h>
+	<stdlib.h>
+	"linked_lest.h"
+
+1693375868 c:\users\mohamed\desktop\linked_lest.c\linked_lest.h
+
