@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>7.0</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8.C</ToolchainName>
+    <ProjectGuid>dce6c7e3-ee26-4d79-826b-08594b9ad897</ProjectGuid>
+    <avrdevice>ATmega32</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>ASG_1_DIO</AssemblyName>
+    <Name>ASG_1_DIO</Name>
+    <RootNamespace>ASG_1_DIO</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <BootSegment>2</BootSegment>
+    <ResetRule>0</ResetRule>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <EraseKey />
+    <AsfFrameworkConfig>
+      <framework-data xmlns="">
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.35.1" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.Device>-mmcu=atmega32 -B "%24(PackRepoDir)\atmel\ATmega_DFP\1.2.150\gcc\dev\atmega32"</avrgcc.common.Device>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>NDEBUG</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.150\include</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+        <avrgcc.assembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.150\include</Value>
+          </ListValues>
+        </avrgcc.assembler.general.IncludePaths>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGcc>
+  <avrgcc.common.Device>-mmcu=atmega32 -B "%24(PackRepoDir)\atmel\ATmega_DFP\1.2.150\gcc\dev\atmega32"</avrgcc.common.Device>
+  <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+  <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+  <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+  <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+  <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+  <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>DEBUG</Value>
+    </ListValues>
+  </avrgcc.compiler.symbols.DefSymbols>
+  <avrgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.150\include</Value>
+      <Value>../HAL</Value>
+      <Value>../LAB</Value>
+      <Value>../MCAL</Value>
+      <Value>../MCAL/IO</Value>
+      <Value>../HAL/SEVEN_SEGMENT</Value>
+      <Value>../HAL/LCD</Value>
+      <Value>../HAL/KEYPAD</Value>
+      <Value>../MCAL/INTERRUPT/EXTERNAL_INTERRAPT</Value>
+      <Value>../MCAL/INTERRUPT</Value>
+      <Value>../MCAL/ADC</Value>
+      <Value>../MCAL/TIMER_COUNTER/TIMER0</Value>
+      <Value>../MCAL/TIMER_COUNTER</Value>
+      <Value>../MCAL/TIMER_COUNTER/TIMER2</Value>
+      <Value>../MCAL/TIMER_COUNTER/TIMER1</Value>
+      <Value>../APP/PROJECT</Value>
+      <Value>../MCAL/INTERNAL_EEPROM</Value>
+    </ListValues>
+  </avrgcc.compiler.directories.IncludePaths>
+  <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
+  <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+  <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+  <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+  <avrgcc.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </avrgcc.linker.libraries.Libraries>
+  <avrgcc.assembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.150\include</Value>
+    </ListValues>
+  </avrgcc.assembler.general.IncludePaths>
+  <avrgcc.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcc.assembler.debugging.DebugLevel>
+</AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="APP\main.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\PROJECT\devices.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\PROJECT\PROJECT_FUNCTION_HEADERS.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\PROJECT\PROJECT_INTc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\PROJECT\PROJECT_PINS.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\PROJECT\PROJECT_PROCESSES.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\KEYPAD\KEYPAD_FUNCTION.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\KEYPAD\KEYPAD_FUNCTION.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\LCD\LCD_FUNCTION.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\LCD\LCD_FUNCTION.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\SEVEN_SEGMENT\SEVEN_SEGMENT.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\SEVEN_SEGMENT\SEVEN_SEGMENT.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="LAB\BIT_MATH.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="LAB\STD_TYPEDEF.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\ADC\ADC_ADDRESSES.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\ADC\ADC_FUNCTION.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\ADC\ADC_FUNCTION.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\INTERNAL_EEPROM\EEPROM_FUNCTIONS.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\INTERNAL_EEPROM\EEPROM_INIT.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\INTERRUPT\EXTERNAL_INTERRAPT\EXTERNAL_ENTERRAPT_FUNCTIONS.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\INTERRUPT\EXTERNAL_INTERRAPT\EXTERNAL_INTERRAPT_FUNCTION.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\INTERRUPT\GENERAL_INTERRAPT.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\INTERRUPT\INTERRUPT_ADRESSES.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\IO\DIO_FINCTION.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\IO\DIO_FINCTION.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\IO\IO_ADDRESSES1.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\IO\STD_DIO.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\TIMER_COUNTER\TIMER0\TIMER0.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\TIMER_COUNTER\TIMER0\TIMER0.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\TIMER_COUNTER\TIMER1\TIMER1FUNCTION.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\TIMER_COUNTER\TIMER1\TIMER1_FUNCTION.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\TIMER_COUNTER\TIMER2\TIMER2_FUNCTION.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\TIMER_COUNTER\TIMER2\TIMER2_FUNCTION.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\TIMER_COUNTER\TIMER_COUNTER_ADDRESES.h">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="APP\PROJECT" />
+    <Folder Include="HAL\LCD" />
+    <Folder Include="HAL\KEYPAD" />
+    <Folder Include="HAL\SEVEN_SEGMENT" />
+    <Folder Include="MCAL" />
+    <Folder Include="APP" />
+    <Folder Include="HAL" />
+    <Folder Include="LAB" />
+    <Folder Include="MCAL\INTERRUPT\EXTERNAL_INTERRAPT" />
+    <Folder Include="MCAL\IO" />
+    <Folder Include="MCAL\INTERRUPT" />
+    <Folder Include="MCAL\ADC" />
+    <Folder Include="MCAL\INTERNAL_EEPROM" />
+    <Folder Include="MCAL\TIMER_COUNTER" />
+    <Folder Include="MCAL\TIMER_COUNTER\TIMER1" />
+    <Folder Include="MCAL\TIMER_COUNTER\TIMER2" />
+    <Folder Include="MCAL\TIMER_COUNTER\TIMER0" />
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>
